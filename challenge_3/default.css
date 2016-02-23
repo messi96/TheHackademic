@@ -5,8 +5,6 @@ body {
 	font: .75em/1.2 Arial, Helvetica, sans-serif;
 	padding: 10px 0;
 	color: #000;
-	background: #fff url(/WEBSCR-500-20080131-1/en_US/i/header/header_bg.gif) repeat-x 0 83px;
-	border: 7px solid #fff;
 	overflow-y: visible;
 	_overflow-y: auto;
 }

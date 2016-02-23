@@ -5,7 +5,7 @@
 <title>DeskTest : Funrally Axis Cube Black Base</title>
 </head>
  <div>
-  <body background="White-Wallpaper-HD-Pics.jpg"><center/>
+  <body background="1351580.jpg"><center/>
   <div/>
 <body>
 <p align="center"><font size="10"><b><font color=black>The Cuber's World </font></a></u>
@@ -71,16 +71,16 @@
     Skillset: Analysis & Critical Thinking, Attention Span Building, Color & Shape Recognition, Hand & Eye Co-ordination, Problem Solving, Rhythm & Pattern Recognition, Memory Building<br/><br/>
 
 
+      <input type="hidden" name="quantity" value="1">
       <b>Click here to pay : <b/></font></b>
       </font><form action="payform.php" method="post">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="type" value="cubers">
-      <input type="hidden" name="quantity" value="1">
       <input type="hidden" name="name" value="Funrally Axis Cube Black">
-      <input type="hidden" name="amount" value="$70.00">
+      <input type="hidden" name="amount" value="70.00">
       <p>&nbsp;</p>
       <form/>
-      <input type="image" src="x-click-butcc.gif"
+      <input type="image" src="x-click-butcc.png"
 
     </td>
     <td width="14%" align="center" valign="top"></td>

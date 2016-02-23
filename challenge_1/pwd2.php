@@ -25,6 +25,7 @@ SO TRY HARDER   -->
 
 	echo "<br/><br/><br/><br/><center><font size = 7 color=Red><b>Nice Try.. <br/><br/> Invalid Username/Password. Try Again !!<b/></font>"; 
 
+		die();
     }
 
 ?>
