@@ -57,7 +57,7 @@ if(isset($_GET['id']))
 }
 	else{ 
 
-			header("Location: /test_challenge/challenge_4/inside/main_index.php?id=1");
+			header("Location: /TheHackademic/challenge_4/inside/main_index.php?id=1");
 			//echo "<font size = 5 color = white>Please input the ID as parameter with numeric value<font/>";
 			
 		}
