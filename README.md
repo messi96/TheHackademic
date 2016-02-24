@@ -11,4 +11,4 @@ TheHackademic Project helps you test your knowledge in Web Application Security 
    Type localhost in your Browser and TheHackademic HomePage will be served. 
    Try out the Challenges, Don't loose patience & All The Best !
 
-2. Deployment Would be way easier using Docker Engine. Docker repository reference link would be added here in a few. 
+2. Deployment Would be way easier using Docker Engine. Docker repository reference link would be added here shortly.
