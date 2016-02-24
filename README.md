@@ -10,4 +10,5 @@ TheHackademic Project helps you test your knowledge in Web Application Security 
    Be sure to configure mysql according to your settings.
    Type localhost in your Browser and TheHackademic HomePage will be served. 
    Try out the Challenges, Don't loose patience & All The Best !
+
 2. Deployment Would be way easier using Docker Engine. Docker repository reference link would be added here in a few. 
