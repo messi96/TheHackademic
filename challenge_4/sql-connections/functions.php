@@ -1,5 +1,5 @@
 <?php
-//including the Mysql connect parameters.
+
 include("../sql-connections/db-creds.inc");
 include("../sql-connections/sql-connect-1.php");
 
