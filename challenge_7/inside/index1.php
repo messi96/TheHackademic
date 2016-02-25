@@ -219,6 +219,12 @@ else
 		    	echo "<center><br/>You have logged in, but unfortunately you cannot access your profile without <b> OurBrowser<b> <center>";
 		    	echo "<br/><center>*If you are our user, you would have our paid browser and you would know how to<center>";
 		    	echo "<br/>";
+			echo '<center>';
+			echo "<br/><br/><br/>";
+			echo '<form action="" method="post">';
+			echo '<input  type="submit" name="submit" value="Delete Your Cookie!" />';
+			echo '</form>';
+			echo '</center>';
 		    }
 		}	
 	else

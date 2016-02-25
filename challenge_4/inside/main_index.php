@@ -22,22 +22,20 @@
 
 include("../sql-connections/sql-connect.php");
 
-// take the variables 
+
 if(isset($_GET['id']))
 {
 	$id=$_GET['id'];
 	
 	$id= blacklist($id);
 	//echo "<br>";
-	//echo $id;
 	//echo "<br>";
 	$hint=$id;
 
-// connectivity 
 	$sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";
 	$result=mysql_query($sql);
 	$row = mysql_fetch_array($result);
-	if($id != 1){
+	if($id == 8 || $id == 12 || $id == 9 || $id == 2 || $id == 3 || $id == 4 || $id == 5 || $id == 6 || $id == 7 || $id == 10 || $id == 11 || $id == 13 || $id == 14){
 		echo "<font size = 5>Nice try :P <font/>" ;
 		die();
 	}
@@ -57,8 +55,8 @@ if(isset($_GET['id']))
 }
 	else{ 
 
-			header("Location: /test_challenge/challenge_4/inside/main_index.php?id=1");
-			//echo "<font size = 5 color = white>Please input the ID as parameter with numeric value<font/>";
+			header("Location: /TheHackademic/challenge_4/inside/main_index.php?id=1");
+			
 			
 		}
 
@@ -66,13 +64,13 @@ if(isset($_GET['id']))
 
 function blacklist($id)
 {
-	$id= preg_replace('/or/i',"", $id);			//strip out OR (non case sensitive)
+	$id= preg_replace('/or/i',"", $id);		//strip out OR (non case sensitive)
 	$id= preg_replace('/and/i',"", $id);		//Strip out AND (non case sensitive)
 	$id= preg_replace('/[\/\*]/',"", $id);		//strip out /*
 	$id= preg_replace('/[--]/',"", $id);		//Strip out --
-	$id= preg_replace('/[#]/',"", $id);			//Strip out #
+	$id= preg_replace('/[#]/',"", $id);		//Strip out #
 	$id= preg_replace('/[\s]/',"", $id);		//Strip out spaces
-	$id= preg_replace('/[\/\\\\]/',"", $id);		//Strip out slashes
+	$id= preg_replace('/[\/\\\\]/',"", $id);	//Strip out slashes
 	return $id;
 }
 

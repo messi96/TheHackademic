@@ -2,34 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SETUP DB</title>
+<title>Welcome To The World Hackers</title>
 </head>
 
 <body bgcolor="#000000">
-
-<div style=" margin-top:20px;color:#FFF; font-size:24px; text-align:center"> 
+<font color = #FFFFFF>
+<div style=" margin-top:20px;color:#FFFFFF; font-size:24px; text-align:center"> 
 Welcome&nbsp;&nbsp;&nbsp;
-<font color="#FF0000"> Dhakkan </font>
+<font color="#FFFFFF">  </font>
 <br>
 </div>
 
-<div style=" margin-top:10px;color:#FFF; font-size:23px; text-align:left">
-<font size="3" color="#FFFF00">
-SETTING UP THE DATABASE SCHEMA AND POPULATING DATA IN TABLES:
+<div style=" margin-top:10px;color:#FFFFFF; font-size:23px; text-align:left">
+<font size="3" color="#FFFFFF">
+<center>Wait a bit.. Setting up database !<center>
 <br><br> 
 
 
 <?php
 //including the Mysql connect parameters.
 include("../sql-connections/db-creds.inc");
-
+echo "<center>";
 
 
 
 $con = mysql_connect($host,$dbuser,$dbpass);
 if (!$con)
   {
-  die('[*]...................Could not connect to DB, check the creds in db-creds.inc: ' . mysql_error());
+  die('Could not connect to DB, check the creds in db-creds.inc: ' . mysql_error());
   }
 
 
@@ -38,103 +38,66 @@ if (!$con)
 //@mysql_select_db('mysql',$con)	
 	
 //purging Old Database	
-	$sql="DROP DATABASE IF EXISTS security";
+	$sql="DROP DATABASE IF EXISTS waymessier_db";
 	if (mysql_query($sql))
-		{echo "[*]...................Old database 'SECURITY' purged if exists"; echo "<br><br>\n";}
+		{echo "Old database 'waymessier_db' purged if exists"; echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error purging database: " . mysql_error(); echo "<br><br>\n";}
+		{echo "Error purging database: " . mysql_error(); echo "<br><br>\n";}
 
 
-//Creating new database security
-	$sql="CREATE database `security` CHARACTER SET `gbk` ";
+//Creating new database waymessier_db
+	$sql="CREATE database `waymessier_db` CHARACTER SET `gbk` ";
 	if (mysql_query($sql))
-		{echo "[*]...................Creating New database 'SECURITY' successfully";echo "<br><br>\n";}
+		{echo "Creating New database 'waymessier_db' successfully";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error creating database: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error creating database: " . mysql_error();echo "<br><br>\n";}
 
 //creating table users
-$sql="CREATE TABLE security.users (id int(3) NOT NULL AUTO_INCREMENT, username varchar(20) NOT NULL, password varchar(20) NOT NULL, PRIMARY KEY (id))";
+$sql="CREATE TABLE waymessier_db.users (id int(3) NOT NULL AUTO_INCREMENT, username varchar(20) NOT NULL, password varchar(20) NOT NULL, PRIMARY KEY (id))";
 	if (mysql_query($sql))
-		{echo "[*]...................Creating New Table 'USERS' successfully";echo "<br><br>\n";}
+		{echo "Creating New Table 'USERS' successfully";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error creating Table: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error creating Table: " . mysql_error();echo "<br><br>\n";}
 
 
 //creating table emails
-$sql="CREATE TABLE security.emails
+$sql="CREATE TABLE waymessier_db.emails
 		(
 		id int(3)NOT NULL AUTO_INCREMENT,
 		email_id varchar(30) NOT NULL,
 		PRIMARY KEY (id)
 		)";
 	if (mysql_query($sql))
-		{echo "[*]...................Creating New Table 'EMAILS' successfully"; echo "<br><br>\n";}
+		{echo "Creating New Table 'EMAILS' successfully"; echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error creating Table: " . mysql_error();echo "<br><br>\n";}
-
-
-
-//creating table uagents
-$sql="CREATE TABLE security.uagents
-		(
-		id int(3)NOT NULL AUTO_INCREMENT,
-		uagent varchar(256) NOT NULL,
-		ip_address varchar(35) NOT NULL,
-		username varchar(20) NOT NULL,
-		PRIMARY KEY (id)
-		)";
-	if (mysql_query($sql))
-		{echo "[*]...................Creating New Table 'UAGENTS' successfully";echo "<br><br>\n";}
-	else 
-		{echo "[*]...................Error creating Table: " . mysql_error();echo "<br><br>\n";}
-
-
-//creating table referers
-$sql="CREATE TABLE security.referers
-		(
-		id int(3)NOT NULL AUTO_INCREMENT,
-		referer varchar(256) NOT NULL,
-		ip_address varchar(35) NOT NULL,
-		PRIMARY KEY (id)
-		)";
-	if (mysql_query($sql))
-		{echo "[*]...................Creating New Table 'REFERERS' successfully";echo "<br><br>\n";}
-	else 
-		{echo "[*]...................Error creating Table: " . mysql_error();echo "<br><br>\n";}
-
-
-
+		{echo "Error creating Table: " . mysql_error();echo "<br><br>\n";}
 
 
 
 
 //inserting data
-$sql="INSERT INTO security.users (id, username, password) VALUES ('1', 'Dumb', 'Dumb'), ('2', 'Angelina', 'I-kill-you'), ('3', 'Dummy', 'p@ssword'), ('4', 'secure', 'crappy'), ('5', 'stupid', 'stupidity'), ('6', 'superman', 'genious'), ('7', 'batman', 'mob!le'), ('8', 'admin', 'admin'), ('9', 'admin1', 'admin1'), ('10', 'admin2', 'admin2'), ('11', 'admin3', 'admin3'), ('12', 'dhakkan', 'dumbo'), ('14', 'admin4', 'admin4')";
+$sql="INSERT INTO waymessier_db.users (id, username, password) VALUES ('1', 'TheGamer', 'C.O.D'), ('2', 'scrtusr', 'mint_cinnamon'), ('3', 'soumya', 'fu**inglol'), ('4', 'Adamnew', 'Evenew'), ('5', 'Preciouslate', 'PreTimeLate'), ('6', 'DultonThe', 'WowDulton_coder'), ('7', 'Newbatman', 'catty_woman'), ('8', 'admin', 'TheAdminPassw0rd'), ('9', 'Joey', 'Tribbiani'), ('10', 'Chandler', 'Bing'), ('11', 'Matthew', 'Perry'), ('12', 'Monica', 'Geller'), ('13', 'Ross', 'Geller1'), ('14', 'Phoebe', 'Buffay')";
 	if (mysql_query($sql))
-		{echo "[*]...................Inserted data correctly into table 'USERS'";echo "<br><br>\n";}
+		{echo "Inserted data correctly into table 'USERS'";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error inserting data: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error inserting data: " . mysql_error();echo "<br><br>\n";}
 
 
 
 //inserting data
-$sql="INSERT INTO `security`.`emails` (id, email_id) VALUES ('1', 'Dumb@dhakkan.com'), ('2', 'Angel@iloveu.com'), ('3', 'Dummy@dhakkan.local'), ('4', 'secure@dhakkan.local'), ('5', 'stupid@dhakkan.local'), ('6', 'superman@dhakkan.local'), ('7', 'batman@dhakkan.local'), ('8', 'admin@dhakkan.com')";
+$sql="INSERT INTO `waymessier_db`.`emails` (id, email_id) VALUES ('1', 'TheGaminAddict@Gamers.com'), ('2', 'Linuxlovers@linux.com'), ('3', 'veryfunny@funny.com'), ('4', 'lovers@lovetime.com'), ('5', 'TimeIs@precious.com'), ('6', 'dallu@aditi.com'), ('7', 'superheroes@best.com'), ('8', 'theadmin@admin.com'),  ('9', 'newone@user.com'),  ('10', 'food@besties.com'),  ('11', 'cubers_world@DeskTest.com'),  ('12', 'thenewadmin@new.com'),  ('13', 'sunil@shankhala.com'),  ('14', 'fourneen@newgmail.com')";
 	if (mysql_query($sql))
-		{echo "[*]...................Inserted data correctly  into table 'EMAILS'";echo "<br><br>\n";}
+		{echo "Inserted data correctly  into table 'EMAILS'";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error inserting data: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error inserting data: " . mysql_error();echo "<br><br>\n";}
 
 
-
-
-//CREATE TABLE security.search (id int(3) NOT NULL AUTO_INCREMENT, search varchar(20) NOT NULL, PRIMARY KEY (id));
-//INSERT INTO `security`.`search` (search) VALUES ( 'Dumb@dhakkan.com'), ('Angel@iloveu.com'), ('Dummy@dhakkan.local'), ( 'secure@dhakkan.local'), ( 'stupid@dhakkan.local'), ( 'superman@dhakkan.local'), ( 'batman@dhakkan.local'), ( 'admin@dhakkan.com')"; 
 
 //including the Challenges DB creation file.
 include("../sql-connections/setup-db-challenge.php");
 ?>
 
-
+<font color = #FFFFFF>
 </font>
 </div>
 </body>

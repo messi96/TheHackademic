@@ -3,11 +3,7 @@
 include("../sql-connections/db-creds.inc");
 include("../sql-connections/sql-connect-1.php");
 
-#################################
-#  Especially for challenges    # 
-#################################
 
-//Creating dynamic string for creating dynamic names
 function num_gen($string_length, $characters)
 {
 	$string = '';
@@ -18,14 +14,14 @@ function num_gen($string_length, $characters)
 	return $string;
 }
 
-$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';   //charset for dynamic generation of strings
-// Generating a dynamic alfanumeric Table name with each purge.
+$characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';   /
+
 $table = num_gen(10, $characters) ;
 
-// Generating Secret key column.
+
 $secret_key = "secret_".num_gen(4, $characters);
 
-//retrieve dynamic table name from database.
+
 function table_name()
 {
 	include '../sql-connections/db-creds.inc';
@@ -39,7 +35,7 @@ function table_name()
 	return $row[0];
 }
 
-//retrieve Column name from database.
+
 function column_name($idee)
 {
 	include '../sql-connections/db-creds.inc';
@@ -55,7 +51,6 @@ function column_name($idee)
 }
 
 
-//retrieve data from  table.
 function data($tab,$col)
 {
 	include '../sql-connections/db-creds.inc';
@@ -69,11 +64,11 @@ function data($tab,$col)
 	return $row[0];
 }
 
-//Updating the counter for Attempts at solving problem.
+
 function next_tryy()
 {
 	$table = table_name();
-	//including the Mysql connect parameters.
+	
 	include '../sql-connections/db-creds.inc';
 	include '../sql-connections/sql-connect-1.php';
 	$sql = "UPDATE $table SET tryy=tryy+1 WHERE id=1";

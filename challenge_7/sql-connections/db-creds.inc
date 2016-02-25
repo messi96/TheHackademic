@@ -1,9 +1,8 @@
 <?php
 
-//give your mysql connection username n password
-$dbuser ='root';
+$dbuser ='root';                         //sql connection username & password
 $dbpass ='';
-$dbname ="security";
+$dbname ="waymessier_db";
 $host = 'localhost';
 $dbname1 = "challenges";
 

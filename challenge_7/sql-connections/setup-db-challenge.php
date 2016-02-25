@@ -2,10 +2,13 @@
 <head>
 </head>
 <body bgcolor="#000000">
+<br/>
+<br/>
+<font color = #FFFFFF>
 <?php
 //including the Mysql connect parameters
 include '../sql-connections/db-creds.inc';
-
+echo "<center>";
 @error_reporting(0);
 if(isset($_GET['id']))
 $id = $_GET['id'];
@@ -22,9 +25,9 @@ if (!$con)
 //purging Old Database for challenges	
 	$sql="DROP DATABASE IF EXISTS $dbname1";
 	if (mysql_query($sql))
-		{echo "[*]...................Old database purged if exists"; echo "<br><br>\n";}
+		{echo "Old database purged if exists"; echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error purging database: " . mysql_error(); echo "<br><br>\n";}
+		{echo "Error purging database: " . mysql_error(); echo "<br><br>\n";}
 
 
 
@@ -32,9 +35,9 @@ if (!$con)
 //Creating new database for challenges
 	$sql="CREATE database $dbname1 CHARACTER SET `gbk` ";
 	if (mysql_query($sql))
-		{echo "[*]...................Creating New database successfully";echo "<br><br>\n";}
+		{echo "Creating New database successfully";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error creating database: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error creating database: " . mysql_error();echo "<br><br>\n";}
 
 include '../sql-connections/functions.php';
 
@@ -49,9 +52,9 @@ $sql="CREATE TABLE IF NOT EXISTS $dbname1.$table
 		tryy INT(11) UNSIGNED NOT NULL DEFAULT 0 
 		)";
 	if (mysql_query($sql))
-		{echo "[*]...................Creating New Table '$table' successfully";echo "<br><br>\n";}
+		{echo "Creating New Table '$table' successfully";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error creating Table: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error creating Table: " . mysql_error();echo "<br><br>\n";}
 
 
 // creating random key
@@ -62,15 +65,16 @@ $hash = md5(rand(0,100000));
 //inserting Dummy data into table
 $sql="INSERT INTO $dbname1.$table VALUES (1, '$hash', '$sec_key', 0)";
         if (mysql_query($sql))
-		{echo "[*]...................Inserted data correctly  into table '$table'";echo "<br><br>\n";}
+		{echo "Inserted data correctly  into table '$table'";echo "<br><br>\n";}
 	else 
-		{echo "[*]...................Error inserting data: " . mysql_error();echo "<br><br>\n";}
+		{echo "Error inserting data: " . mysql_error();echo "<br><br>\n";}
 
-echo "[*]...................Inserted secret key '$secret_key' into table ";echo "<br><br>\n";
+echo "Inserted secret key '$secret_key' into table ";echo "<br><br>\n";
 
 if(isset($id))
 header( "refresh:0;url=$id" );
 
 ?>
+<font/>
 </body>
 </html>

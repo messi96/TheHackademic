@@ -18,6 +18,13 @@
 <title>OWASP Hackademic Sample Challenges</title>
 <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
+<br/>
+<br/>
+<br/>
+<h1 class="style6"><a href="challenge_4/sql-connections/setup-db.php"><font size=4>Setup Database for challenge 4</font></a><br/></h1>
+<h1 class="style6"><a href="challenge_7/sql-connections/setup-db.php"><font size=4>Setup Database for challenge 7</font></a></h1>
+<font/></br></br>
+<br/>
 
 
 <body>
@@ -53,7 +60,7 @@
 	</tr>
 	<tr>
 		<td class="style2" style="width: 123px"><span >Challenge_5 </span></td>
-		<td class="style2"><br /><p>  XSS <br /> <br /> <a href="challenge_5/" target="_blank">  Under Construction</a> "<strong>Tag : XSS!</strong>".</p><br />
+		<td class="style2"><br /><p> You are working as an UnderCover Agent for a mission, and almost close to complete the mission successfully. You were following a criminal and you have the complete proof of him being accussed of the charge. He is currently residing in a resort, but the resort Officials are not revealing any information about him [ or any customer ]. You too can't reveal your identity. So all you have to do know is inject into the website, get information and details about the victim. Don't Worry about the Ethics and stuffs, that will be taken care off. <br /> <br /> <a href="challenge_5/" target="_blank">  Under Construction</a> "<strong>Tag : XSS!</strong>".</p><br />
 		</td>
 	</tr>
 	<tr>

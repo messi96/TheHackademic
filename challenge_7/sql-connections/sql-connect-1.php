@@ -1,6 +1,5 @@
 <?php
 
-//including the Mysql connect parameters.
 include("../sql-connections/db-creds.inc");
 @error_reporting(0);
 @$con = mysql_connect($host,$dbuser,$dbpass);
@@ -20,8 +19,7 @@ if (!$con)
 
 $sql_connect_1 = "SQL Connect included";
 
-############################################
-# For Challenge series--- Randomizing the Table names.
+
 
 ?>
 
