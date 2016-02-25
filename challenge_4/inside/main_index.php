@@ -55,7 +55,7 @@ if(isset($_GET['id']))
 }
 	else{ 
 
-			header("Location: /TheHackademic/challenge_4/inside/main_index.php?id=1");
+			header("Location: main_index.php?id=1");
 			
 			
 		}
